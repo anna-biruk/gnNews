@@ -1,9 +1,9 @@
-###Created with:
+### Created with:
  - React
 - Redux Toolkit
 - Tailwind CSS
 
-###Main page:
+### Main page:
 ![img](./public/main.png)
 
 ![img](./public/main2.png)
