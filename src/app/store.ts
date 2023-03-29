@@ -1,13 +1,15 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import newsReducer from "../features/news/newsSlice";
+import { useDispatch } from "react-redux";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    news: newsReducer,
   },
 });
 
 export type AppDispatch = typeof store.dispatch;
+export const useAppDispatch: () => AppDispatch = useDispatch;
 export type RootState = ReturnType<typeof store.getState>;
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
